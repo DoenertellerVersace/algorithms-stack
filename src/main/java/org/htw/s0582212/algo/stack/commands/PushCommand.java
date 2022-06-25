@@ -36,6 +36,6 @@ public class PushCommand implements ICommand {
     }
 
     private String getConfirmation() {
-        return "student " + stack.peak() + " was successfully added to the stack!\n";
+        return "student " + stack.peek() + " was successfully added to the stack!\n";
     }
 }

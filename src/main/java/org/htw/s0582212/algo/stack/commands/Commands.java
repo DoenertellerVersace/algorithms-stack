@@ -8,7 +8,7 @@ public class Commands {
     enum Command {
         EXIT(new ExitProgramCommand()),
         POP(new PopCommand()),
-        PEEK(new PeakCommand()),
+        PEEK(new PeekCommand()),
         PUSH(new PushCommand()),
         CLEAR(new ClearCommand()),
         SHOW(new ShowCommand()),

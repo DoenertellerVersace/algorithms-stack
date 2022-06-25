@@ -2,7 +2,7 @@ package org.htw.s0582212.algo.stack.util;
 
 public interface StackType<T> {
     T pop();
-    T peak();
+    T peek();
     void push(T t);
     void clear();
     boolean isEmpty();

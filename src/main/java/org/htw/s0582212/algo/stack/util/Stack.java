@@ -14,7 +14,7 @@ public class Stack<T> implements StackType<T> {
     }
 
     @Override
-    public T peak() {
+    public T peek() {
         return top == null ? null : top.element;
     }
 
