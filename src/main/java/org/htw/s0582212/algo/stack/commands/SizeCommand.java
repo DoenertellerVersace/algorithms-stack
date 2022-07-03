@@ -5,7 +5,7 @@ public class SizeCommand implements ICommand {
     public static final String NUMBER_LINE = "number of students in the stack: ";
 
     @Override
-    public void execute() {
+    public void execute(String[] args) {
         console.write(NUMBER_LINE + stack.size() + "\n");
     }
 

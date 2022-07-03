@@ -4,7 +4,7 @@ import static org.htw.s0582212.algo.stack.console.ConsoleMenu.HELP_MESSAGE;
 
 public class HelpCommand implements ICommand {
     @Override
-    public void execute() {
+    public void execute(String[] args) {
         console.write(HELP_MESSAGE);
     }
 }

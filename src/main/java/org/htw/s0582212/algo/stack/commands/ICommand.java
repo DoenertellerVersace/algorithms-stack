@@ -9,6 +9,6 @@ public interface ICommand {
     IConsole console = StackConsole.getInstance();
     Stack<Student> stack = StackConsole.getStack();
 
-    void execute();
+    void execute(String[] args);
 
 }

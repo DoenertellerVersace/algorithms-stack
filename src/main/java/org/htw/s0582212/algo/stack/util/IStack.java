@@ -1,6 +1,6 @@
 package org.htw.s0582212.algo.stack.util;
 
-public interface StackType<T> {
+public interface IStack<T> {
     T pop();
     T peek();
     void push(T t);

@@ -3,6 +3,7 @@ package org.htw.s0582212.algo.stack.model;
 public class Student {
     private String firstName;
     private String lastName;
+//    private String program;
     private StudyProgram program;
     private int studentNo;
 
@@ -36,7 +37,16 @@ public class Student {
     public StudyProgram getProgram() {
         return program;
     }
+//
+//    public St getProgram() {
+//        return program;
+//    }
 
+//    public Student program(String program) {
+//        this.program = program;
+//        return this;
+//    }
+//
     public Student program(StudyProgram program) {
         this.program = program;
         return this;

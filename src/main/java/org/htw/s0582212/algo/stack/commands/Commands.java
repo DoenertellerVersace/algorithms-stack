@@ -12,6 +12,7 @@ public class Commands {
         PUSH(new PushCommand()),
         CLEAR(new ClearCommand()),
         SHOW(new ShowCommand()),
+        EMPTY(new EmptyCommand()),
         SIZE(new SizeCommand()),
         HELP(new HelpCommand());
 
@@ -22,13 +23,14 @@ public class Commands {
         }
     }
 
-    public static ICommand parseCommand(String input) {
+    public static void parseAndExecuteCommand(String input) {
+        String[] args = input.strip().split(" ", 2);
         ICommand command;
         try {
-            command = Command.valueOf(input.strip().toUpperCase(Locale.ROOT)).command;
+            command = Command.valueOf(args[0].strip().toUpperCase(Locale.ROOT)).command;
         } catch (IllegalArgumentException ignored) {
             command = HELP.command;
         }
-        return command;
+        command.execute(args.length == 1 ? new String[0] : args[1].split(","));
     }
 }

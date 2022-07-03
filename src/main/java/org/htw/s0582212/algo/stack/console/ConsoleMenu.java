@@ -13,6 +13,7 @@ public class ConsoleMenu {
                 - pop   -> will take the most recent item from the stack and return it
                 - push   -> will prompt user to fill in an item and put it on the stack
                 - show   -> will print out the stack
+                - empty   -> will reveal if the stack is empty
                 - size   -> will show the size of the stack
                 - clear   -> will empty the stack
                 - help   -> will print out this page
@@ -22,7 +23,7 @@ public class ConsoleMenu {
     public static void run(IConsole console) {
         console.write(GREETING + HELP_MESSAGE);
         while (true) {
-            Commands.parseCommand(console.readString(PROMPT)).execute();
+            Commands.parseAndExecuteCommand(console.readString(PROMPT));
         }
     }
 }

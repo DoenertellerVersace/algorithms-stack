@@ -7,7 +7,7 @@ public class PeekCommand implements ICommand {
     public static final String NO_STUDENT = "no student to peek!\n";
 
     @Override
-    public void execute() {
+    public void execute(String[] args) {
         Student student = stack.peek();
         console.write(student == null ? NO_STUDENT : student + "\n");
     }

@@ -2,14 +2,14 @@ package org.htw.s0582212.algo.stack.util;
 
 import org.htw.s0582212.algo.stack.console.StackConsole;
 
-public class Stack<T> implements StackType<T> {
+public class Stack<T> implements IStack<T> {
 
     private Element top = null;
 
     @Override
     public T pop() {
         Element temp = top;
-        top = temp == null ? null : temp.next == null ? null : temp.next;
+        top = temp == null ? null : temp.next;
         return temp == null ? null : temp.element;
     }
 

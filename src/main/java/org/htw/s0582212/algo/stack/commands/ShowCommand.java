@@ -6,7 +6,7 @@ public class ShowCommand implements ICommand {
     public static final String NO_STUDENTS = "no students in the stack!\n";
 
     @Override
-    public void execute() {
+    public void execute(String[] args) {
         if (!stack.isEmpty()) {
             console.write(ALL_STUDENTS);
             stack.print();
